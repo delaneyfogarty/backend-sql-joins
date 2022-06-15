@@ -5,6 +5,7 @@
 SELECT
 film.title
 from film
-LEFT JOIN film_category on film.title = film_category.film_id
+LEFT JOIN film_category on film.film_id = film_category.film_id
 LEFT JOIN category on film_category.category_id = category.category_id
-WHERE category.category_id = 'Action';
+WHERE category.name = 'Action';
+
